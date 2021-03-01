@@ -27,7 +27,7 @@ func TestSentence(t *testing.T) {
 	input := strings.NewReader("This is a sentence\n")
 	//input := bufio.NewReader(strings.NewReader("This is a sentence\n"))
 	//input := bytes.NewBufferString("This \nis a multi line sentence\n")
-	got, err := myfmt.Single(input, ioutil.Discard)
+	got, err := myfmt.Sentence(input, ioutil.Discard)
 	want := "This is a sentence"
 	if err != nil {
 		t.Error(err)

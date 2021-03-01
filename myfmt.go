@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"os"
 )
 
 //Single word Testing...
@@ -21,7 +20,7 @@ func Sentence(r io.Reader, w io.Writer) (string, error) {
 	// var word string
 	// _, _ = fmt.Fscanln(r, &word)
 
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(r)
 	scanner.Scan()
 	word := scanner.Text()
 
